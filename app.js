@@ -32,7 +32,7 @@ const checkWeather = async (city) => {
   console.log(data);
 
   cityElement.innerText = decodeURIComponent(data.name);
-  TempElement.innerText = `${data.main.temp}`;
+  TempElement.innerText = `${Math.round(data.main.temp)}°C`;
   humidityElement.innerText = `${data.main.humidity}%`;
   windElement.innerText = `${data.wind.speed}km/h`;
 
